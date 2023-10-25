@@ -12,7 +12,11 @@ const vowelResult = () => {
       vowelCount++;
     }
   }
-  result.innerHTML = `${word.value.toUpperCase()} has ${vowelCount} vowels`;
+  if (vowelCount == 1) {
+    result.innerHTML = `${word.value.toUpperCase()} has ${vowelCount} vowel`;
+  } else {
+    result.innerHTML = `${word.value.toUpperCase()} has ${vowelCount} vowels`;
+  }
 };
 
 btn.addEventListener("click", vowelResult);
